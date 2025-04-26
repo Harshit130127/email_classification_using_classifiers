@@ -2,33 +2,28 @@ import streamlit as st
 import pickle 
 from nltk.corpus import stopwords
 import nltk
-nltk.download('punkt')
-
+nltk.download('stopwords', quiet=True)
+nltk.download('punkt', quiet=True)
 from nltk.stem import PorterStemmer
 import string
 
-# Initialize the Porter Stemmer
 ps = PorterStemmer()
 
-# Load stop words
 stop_words = stopwords.words('english')
 
-# Load the vectorizer and model
 tfdf = pickle.load(open(r'D:\ML projects\Newml2\vectorconverter', 'rb'))
 model = pickle.load(open(r'D:\ML projects\Newml2\model', 'rb'))
 
-# Streamlit app title
 st.title("Email and Message Spam Detection")
 st.markdown("""
     This application uses machine learning to classify emails and messages as spam or not spam.
     Please enter your text in the input box below and click on 'Predict'.
 """)
 
-# User input
 user_input = st.text_input('Enter the email or message', placeholder="Type your message here...")
 
 def transform_text(text):
-    text = text.lower()  # Convert to lowercase
+    text = text.lower()  
     text = nltk.word_tokenize(text)
     y = []
     for i in text:
