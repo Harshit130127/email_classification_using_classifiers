@@ -79,6 +79,6 @@ Pickle
 
 ### Deployment:
 
-Created a user friendly interface using Streamlit for real-time spam detection.
+Created a user friendly interface using Streamlit for real time spam detection.
 
 The app allows users to input email text and receive a prediction of whether the email is spam or not.
