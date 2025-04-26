@@ -11,8 +11,8 @@ ps = PorterStemmer()
 
 stop_words = stopwords.words('english')
 
-tfdf = pickle.load(open(r'D:\ML projects\Newml2\vectorconverter', 'rb'))
-model = pickle.load(open(r'D:\ML projects\Newml2\model', 'rb'))
+tfdf = pickle.load(open(r'vectorconverter', 'rb'))
+model = pickle.load(open(r'model', 'rb'))
 
 st.title("Email and Message Spam Detection")
 st.markdown("""
