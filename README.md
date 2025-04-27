@@ -4,7 +4,7 @@
 Overview
 This project aims to build a robust spam email classifier using machine learning techniques.
 
-It involves several steps, from data exploration and feature engineering to model training, hyperparameter tuning, and deployment using Streamlit.
+It involves several steps, from data exploration and feature engineering to data encoding, model training, hyperparameter tuning, and deployment using Streamlit.
 
 Dataset
 Source: https://www.kaggle.com/datasets/ashfakyeafi/spam-email-classification
